@@ -1,0 +1,280 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  1.2 Common Classes
+/*----------------------------------------*/
+
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+img {
+	max-width: 100%;
+}
+
+.fix {
+    overflow: hidden;
+}
+.clear{
+    clear: both;
+}
+
+.z-index-1{
+	z-index: 1;
+}
+
+.z-index-11{
+	z-index: 11;
+}
+
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.overflow-x-visible{
+	overflow-x: visible;
+	overflow-y: hidden;
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+.bdr-rds {
+	& img {
+		border-radius: 20px;
+	}
+}
+.bdr-btm {
+	border-bottom: 1px solid rgba(255,255,255, .15);
+	display: inline-block;
+}
+.bdr-btm-three {
+	border-bottom: 1px solid var(--rs-theme-bdr-btm);
+	display: inline-block;
+}
+
+.rs-black-bg {
+	background-color: var(--rs-common-black);
+}
+.rs-blue-bg {
+	background-color: var(--rs-theme-color);
+}
+.rs-nblue-bg {
+	background-color: var(--rs-theme-nblue);
+}
+.rs-yellow-bg {
+	background-color: var(--rs-theme-sec-color);
+}
+/* service css */
+.br-24 {
+	border-radius: 24px;
+}
+.br-15 {
+	border-radius: 15px;
+}
+//**brand transiton css **//
+
+.rs-slide-transtion {
+	-webkit-animation-timing-function: linear;
+	transition-timing-function: linear;
+}
+.rs-brand-slide-element {
+	width: auto;
+	display: inline-block;
+}
+
+.rs-nblue-bg-white {
+	background-color: var(--rs-theme-color);
+	color: #fff;
+}
+.rs-cream-bg {
+	background-color: var(--rs-cream-bgdn);
+}
+.rs-cream-bg-4 {
+	background-color: #FFF3D7;
+}
+.bdr-about-bg {
+	border-radius: 350px;
+	@media #{$lg,$md,$xs} {
+		border-radius: 40px;
+	}
+}
+.rs-theme-black-bg {
+	background-color: var(--rs-heading-color);
+}
+.fs-100 {
+	font-size: 100px;
+	@media #{$xl} {
+        font-size: 88px;
+    }
+	@media #{$lg} {
+		font-size: 74px;
+	}
+	@media #{$xs} {
+		font-size: 60px;
+	}
+}
+
+.rs-rot-180 {
+	@include transform(rotate(180deg));
+}
+
+.rs-upper {
+	text-transform: uppercase;
+}
+
+// team-home-2 
+.team-bg {
+	background-color: #FBF6EF;
+}
+
+// home-3 
+.rsprocess-boder {
+	border: 1px solid #57595C;
+	padding: 60px 34px;
+	border-radius: 215px;
+	@media #{$lg} {
+		padding: 50px 20px;
+	}
+	& p {
+		@media #{$lg} {
+			font-size: 12px;
+		}
+		@media #{$sm} {
+			font-size: 14px;
+		}
+	}
+	@media #{$md,$xs} {
+		margin-bottom: 30px;
+	}
+	@media #{$sm} {
+		padding: 45px 20px;
+		margin-bottom: 30px;
+	}
+	&-h-3 {
+		@media #{$md,$sm} {
+			margin-bottom: 0;
+		}
+		@media #{$xs} {
+			margin-bottom: 30px;
+		}
+	}
+	&-hr-3 {
+		@media #{$xs} {
+			margin-bottom: 0;
+		}
+	}
+}
+.bdr-rdius {
+	border-radius: 140px;
+}
+.rs-bdrs-15 {
+	& img {
+		border-radius: 15px;
+	}
+}
+.text-transfm {
+	text-transform: uppercase;
+}
+
+.rs-solid-bg {
+	&.jarallax {
+		height: 800px;
+		@media #{$lg} {
+			height: 600px;
+		}
+		@media #{$md} {
+			height: 400px;
+		}
+		@media #{$sm} {
+			height: 300px;
+		}
+	}
+}
+
+.rs-hero-area-bgimg {
+	background-size: cover;
+}
+.text-white {
+	color: #fff;
+}
+.text-bluwhite {
+	color: #B1B4BA;
+	margin-bottom: 0;
+}
+
+.rs-fs { 
+	&-40 {
+		font-size: 40px;
+		font-weight: 500;
+		line-height: 50px;
+		@media #{$xl} {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		@media #{$md} {
+			font-size: 15px;
+			line-height: 30px;
+		}
+		@media #{$xs} {
+			font-size: 25px;
+			line-height: 0;
+		}
+	}
+	&-24 {
+		font-size: 24px;
+		@media #{$md} {
+			font-size: 20px;
+		}
+	}
+	&-15 {
+		font-size: 15px;
+		font-weight: 500;
+		color: var(--rs-body-text);
+	}
+	&-20 {
+		font-size: 20px;
+		font-weight: 400;
+		color: #0A0E1A;
+		line-height: 30px;
+		@media #{$xs} {
+			font-size: 18px;
+		}
+	}
+	&-30 {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 40px;
+		@media #{$md} {
+			line-height: 10px;
+		}
+		@media #{$xs} {
+			font-size: 28px;
+			line-height: 30px;
+		}
+	}
+}
+.rs-bordr-rdrs-10 {
+	& img {
+		border-radius: 10px;
+	}
+}
+.rsshowcase__border {
+	border: 1px solid #57595C;
+}
+
+.container-1920 {
+	width: 1920px;
+}
+.z-index-0 {
+	z-index: 0;
+}

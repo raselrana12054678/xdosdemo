@@ -1,0 +1,203 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 6.9 Newsletter
+/*----------------------------------------*/
+.rs-newsletter-area {
+    margin-left: 65px;
+    margin-right: 65px;
+    @media #{$md} {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    @media #{$sm} {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    @media #{$xs} {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    &-h-2 {
+        padding-top: 78px;
+        padding-bottom: 87px;
+    }
+}
+.rs-newsletter { 
+    &-margin {
+        // margin-top: -110px;
+        @media #{$xs} {
+            margin-top: 0;
+            padding-top: 80px;
+        }
+        @media #{$md} {
+            padding-top: 0;
+        }
+    }
+    &-bg {
+        padding: 69px;
+        border-radius: 20px;
+        z-index: 0;
+        position: relative;
+        margin-top: -120px;
+        @media #{$md} {
+            padding: 69px 40px;
+        }
+        @media #{$xs} {
+            padding: 60px 17px;
+        }
+        &-nwsm-4 {
+            padding: 65px 186px 60px 186px;
+            border-radius: 150px;
+            margin-top: inherit;
+            @media #{$xl} {
+                padding: 118px 50px 118px 50px;
+            }
+            @media #{$lg,$md} {
+                padding: 80px 50px 80px 50px;
+            }
+            @media #{$sm} {
+                border-radius: 142px;
+                padding: 80px 50px 80px 50px;
+            }
+            @media #{$xs} {
+                border-radius: 142px;
+                padding: 80px 17px 80px 30px;
+            }
+        }
+    }
+    &-box {
+        padding-left: 73px;
+        @media #{$xl} {
+            padding-left: 0px;
+        }
+        @media #{$lg} {
+            margin-top: 20px;
+        }
+        @media #{$md,$xs} {
+            padding-left: 0;
+        }
+        & form {
+            @include flexbox();
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        & input {
+            border-color: #fff;
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+    }
+    &-input {
+        width: calc(100% - 230px);
+        padding-top: 18px;
+        padding-left: 40px;
+        @media #{$xs} {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        & img {
+            position: absolute;
+            right: 10px;
+            @media #{$xl} {
+                right: 4px;
+            }
+            top: 40%;
+        }
+        & i {
+            position: absolute;
+            right: -4px;
+            @media #{$lg,$md,$sm} {
+                right: 7px;
+            }
+            top: 40%;
+            color: #57595c;
+        }
+        &-nl-4 {
+            & input {
+                    color: #57595C;
+                    border-color: #57595C;
+                @include rs-placeholder{
+                    color: #57595C;
+                    border-color: #57595C;
+                }
+            }
+            & img {
+                color: #57595C;
+            }
+        }
+    }
+    &-back {
+        color: #fff;
+        font-size: 100px;
+        opacity: .10;
+        position: absolute;
+        left: 185px;
+        bottom: -30px;
+        @media #{$xl} {
+            bottom: -22px;
+            left: 150px;
+        }
+        line-height: 1;
+        margin: 0;
+        @media #{$xl} {
+            font-size: 66px;
+        }
+        @media #{$lg} {
+            font-size: 81px;
+        }
+        @media #{$md} {
+            font-size: 60px;
+            left: 102px;
+            bottom: -14px;
+        }
+        @media #{$sm} {
+            font-size: 65px;
+            bottom: 70px;
+        }
+        &-nws-4 {
+            left: 100px;
+            color: #57595C;
+            opacity: 0.1;
+            font-size: 91px;
+            @media #{$xl} {
+                font-size: 48px;
+                left: 150px;
+            }
+            @media #{$lg} {
+                font-size: 68px;
+            }
+            @media #{$md} {
+                font-size: 50px;
+            }
+        }
+    }
+    &-box-2 {
+        & input {
+            border-color: #57595c;
+            color: #57595c;
+            &:focus {
+                color: #57595c;
+            }
+            @include rs-placeholder{
+                color: #57595c;
+            }
+        }
+        & .rs-newsletter-back {
+            opacity: 1;
+            color: #EEEBE6;
+            left: 99px;
+            @media #{$lg,$md,$sm} {
+                left: 115px;
+            }
+            position: absolute;
+        }
+    }
+
+}
+
+.nsl-roket {
+    color: #57595C;
+}

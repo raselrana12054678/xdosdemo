@@ -1,0 +1,45 @@
+// <== placeholder start ==>
+@mixin rs-placeholder {
+  &.placeholder { 
+      @content; 
+  }
+  &:-moz-placeholder {
+      @content; 
+  }
+  &::-moz-placeholder { 
+      @content; 
+  }
+  &:-ms-input-placeholder { 
+      @content;
+   }
+  &::-webkit-input-placeholder {
+      @content;
+   }
+}
+
+// <== transtion start ==>
+@mixin transition($args) { 
+    -webkit-transition: $args; 
+    -moz-transition: $args; 
+    -ms-transition: $args; 
+    -o-transition: $args; 
+    transition: $args; 
+  }
+
+// <== transform start ==>
+  @mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+ }
+
+// <== flexbox start ==>
+ @mixin flexbox() {
+    display:-webkit-box;
+    display:-moz-box; 
+    display:-ms-flexbox; 
+    display:-webkit-flex;
+    display:flex; 
+}

@@ -1,0 +1,88 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 6.3 Brand
+/*----------------------------------------*/
+.rs-brand-area {
+    z-index: 0;
+    position: relative;
+}
+.rs-brand-title {
+    & h3 {
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+.bg {
+    background: radial-gradient(56.41% 5198.4% at 47.5% 62%, #0058FF 0%, #FF4C00 100%);
+}
+// clients start 
+.rs-brand-logo-wrapper {
+    display: inline-block;
+}
+.rs-brand-item-border {
+    border: 1px solid #57595C;
+    @include flexbox();
+    padding: 25px 51px;
+}
+
+.rs-brand-normal-wrapper {
+    border-left: 1px solid #57595C;
+    border-right: 1px solid #57595C;
+    border-bottom: 1px solid #57595C;
+    padding: 80px 78px;
+    margin-top: -14px;
+}
+.rs-brand-wrapper {
+    &-h-5 {
+        padding-bottom: 0;
+    }
+}
+.rs-brand-section-title {
+    position: relative;
+    &::before {
+        content: '';
+        width: 500px;
+        @media #{$xl} {
+            width: 424px;
+        }
+        @media #{$lg} {
+            width: 336px;
+        }
+        @media #{$md} {
+            width: 200px;
+        }
+        @media #{$xs} {
+            width: 35px;
+        }
+        height: 1px;
+        background-color: #57595C;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 15px;
+    }
+    &::after {
+        content: '';
+        width: 500px;
+        @media #{$xl} {
+            width: 424px;
+        }
+        @media #{$lg} {
+            width: 336px;
+        }
+        @media #{$md} {
+            width: 200px;
+        }
+        @media #{$xs} {
+            width: 35px;
+        }
+        height: 1px;
+        background-color: #57595C;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+}

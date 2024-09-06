@@ -1,0 +1,204 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 6.6 Fact
+/*----------------------------------------*/
+.rs-fact-area1 {
+    &-h-2 {
+        padding-top: 62px;
+        padding-bottom: 76px;
+    }
+}
+.rs-fact-area {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.rsfact-area {
+    @media #{$xs} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+.customer-row {
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rsfact {
+    // margin-bottom: 30px;    
+    &__icon {
+        @media #{$xs} {
+            justify-content: center;
+            @include flexbox();
+        }
+        & i {
+            font-size: 110px;
+            @media #{$xs} {
+                font-size: 60px;
+            }
+            color: var(--rs-theme-sec-color);
+        }
+    }
+    &__text {
+        @media #{$xs} {
+            text-align: center;
+        }
+        & span {
+            font-size: 100px;
+            font-weight: 400;
+            font-family: var(--rs-fonts-heading);
+            display: inline-block;
+            line-height: 110px;
+            color: #fff;
+            @media #{$lg} {
+                font-size: 70px;
+                line-height: 58px;
+            }
+            @media #{$md} {
+                font-size: 80px;
+            }
+            @media #{$xs} {
+                font-size: 40px;
+                line-height: 70px;
+            }
+        }
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 400;
+        font-family: var(--rs-fonts-heading);
+        color: #fff;
+        opacity: 50%;
+        @media #{$lg} {
+            font-size: 25px;
+        }
+        @media #{$md} {
+            font-size: 20px;
+        }
+        @media #{$xs} {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        @media #{$sm} {
+            font-size: 22px;
+        }
+    }
+    &-2 {
+        @media #{$xl,$md,$sm} {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        & .rsfact__icon {
+            & span {
+                @media #{$md,$lg} {
+                    text-align: center;
+                }
+                & i {
+                    color: #57595C;
+                    &::before {
+                        @media #{$xxl,$md,$xl,$lg} {
+                            display: inherit;
+                        }
+                    }
+                }
+            }
+        }   
+        & .rsfact__title {
+            font-size: #0A0E1A;
+        }
+    }
+    &-inr {
+        margin-bottom: 0;
+        &-sub {
+            @media #{$xs} {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+}
+.rs-factthumb {
+    @media #{$sm} {
+        padding-top: 30px;
+        display: block;
+    }
+}
+.rsfunfact {
+    &__item {
+        @media #{$sm} {
+            margin-bottom: 30px;
+        }
+    }
+    &__icon {
+        & span {
+            & i {
+                font-size: 84px;
+                display: block;
+                margin-right: 22px;
+                color: #FF5B15;
+            }
+            position: relative;
+            &::after {
+                content: '';
+                width: 1px;
+                height: 100px;
+                background-color: #D9D9D9;
+                position: absolute;
+                top: -23px;
+                right: 0;
+                left: 106px;
+                @media #{$md} {
+                    left: 95px;
+                    top: -37px;
+                }
+                @media #{$sm} {
+                    left: 57px;
+                }
+            }
+        }
+    }
+    &__text {
+        margin-left: 22px;
+        display: block;
+        @media #{$md} {
+            margin-left: 0;
+        }
+        span {
+            font-size: 100px;
+            font-weight: 400;
+            font-family: var(--rs-fonts-heading);
+            line-height: 110px;
+            color: #0A0E1A;
+            @media #{$xl} {
+                font-size: 60px;
+            }
+            @media #{$md} {
+                font-size: 50px;
+                line-height: 40px;
+            }
+            @media #{$xs} {
+                font-size: 50px;
+                line-height: 80px;
+            }
+        }
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 400;
+        font-family: var(--rs-fonts-heading);
+        color: #0A0E1A;
+        line-height: 40px;
+        @media #{$xl} {
+            font-size: 27px;
+        }
+        @media #{$lg} {
+            font-size: 20px;
+        }
+        @media #{$md} {
+            font-size: 13px;
+        }
+        @media #{$xs} {
+            font-size: 26px;
+        }
+    }
+}

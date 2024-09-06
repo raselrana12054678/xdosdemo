@@ -1,0 +1,122 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 4.3 Sidebar css
+/*----------------------------------------*/
+.rs-blog-sidebar {
+    &-widget {
+        padding: 42px;
+        background-color: #FBF6EF;
+        border-radius: 10px;
+        & form {
+            & input {
+                padding: 16px;
+                border: 1px solid #57595C;
+                border-radius: 5px;
+                width: 100%;
+                text-transform: capitalize;
+                &::placeholder {
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    color: #57595C;
+                    font-size: 17px;
+                    line-height: 28px;
+                }
+                outline: 0;
+            }
+            & button {
+                position: absolute;
+                right: 60px;
+                top: 57%;
+                transform: rotate(-45deg);
+                & i {
+                    color: #57595C;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    &-title {
+        font-weight: 400;
+        line-height: 34px;
+        & span {
+            width: 10px;
+            height: 10px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-right: 5px;
+            transform: translateY(-3px);
+            background-color: var(--rs-theme-color);
+        }
+    }
+    &-cat {
+        & ul {
+            & li {
+                margin-bottom: 15px;
+                list-style: none;
+                & a {
+                    color: #57595C;
+                    padding: 22px 25px;
+                    display: block;
+                    line-height: 1;
+                    position: relative;
+                    background-color: #fff;
+                    border: 1px solid #57595C;
+                    border-radius: 5px;
+                    @include transition(.3s);
+                    &:hover {
+                        background-color: var(--rs-theme-color);
+                        color: #fff;
+                    }
+                    &::after {
+                        content: "\f061";
+                        font-family: "Font Awesome 5 pro";
+                        position: absolute;
+                        right: 25px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(-40deg);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    &-post{
+        &-item {
+            border-bottom: 1px solid #57595C;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            &:last-child {
+                border: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        &-title {
+            &:hover {
+                color: var(--rs-theme-color);
+            }
+        }
+    }
+}
+.tagcloud {
+    & a {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 25px;
+        padding: 13px 15px;
+        border: 1px solid #57595C;
+        color: #57595C;
+        display: inline-block;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        margin-right: 5px;
+        text-transform: uppercase;
+        transition: .3s;
+        &:hover {
+            background-color: var(--rs-theme-color);
+            color: #fff;
+            border-color: var(--rs-theme-color);
+        }
+    }
+}

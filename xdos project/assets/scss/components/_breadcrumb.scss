@@ -1,0 +1,105 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* 1.3 Default Spacing
+/*----------------------------------------*/
+.rs-breadcrumb {
+    z-index: 0;
+    &-space {
+        padding-top: 189px;
+        padding-bottom: 94px;
+    }
+    &-title {
+        font-size: 70px;
+        @media #{$md} {
+            font-size: 66px;
+        }
+        @media #{$xs} {
+            font-size: 60px;
+        }
+        font-weight: 500;
+        line-height: 80px;
+        &-details {
+            @media #{$xs} {
+                font-size: 49px;
+            }
+        }
+        &-sub-c {
+            @media #{$xs} {
+                font-size: 49px;
+            }
+        }
+        &-ptflo {
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+        &-sub-ptflo {
+            @media #{$xs} {
+                font-size: 56px;
+            }
+        }
+        &-price-titl {
+            @media #{$xs} {
+                font-size: 46px;
+            }
+        }
+        &-svs-dtls-tle {
+            @media #{$xs} {
+                font-size: 49px;
+            }
+        }
+        &-sv-tile {
+            @media #{$xs} {
+                font-size: 48px;
+            }
+        }
+        &-b-tle {
+            @media #{$xs} {
+                font-size: 46px;
+            }
+        }
+        &-tm-dtlss-tle {
+            @media #{$xs} {
+                font-size: 48px;
+            }
+        }
+    }
+    &-list {
+        & span {
+            display: inline-block;
+            &.active {
+                & a {
+                    color: var(--rs-theme-sec-color);
+                }
+            }
+            & a {
+                color: #B1B4BA;
+                font-size: 20px;
+                transition: .3s;
+                &:hover {
+                    color: var(--rs-theme-color);
+                }
+            }
+            &.dvir {
+                margin: 0 6px;
+                color: #B1B4BA;
+            }
+        }
+    }
+}
+.rs-breadcrumb-shape {
+    z-index: 1;
+    &-shape-1 {
+        left: 13%;
+        top: -25px;
+    }
+    &-shape-2 {
+        right: 30%;
+        top: -70px;
+    }
+    &-shape-3 {
+        right: 10%;
+        top: 10%;
+    }
+}

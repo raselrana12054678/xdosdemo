@@ -1,0 +1,46 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* 2.10 Skill
+/*----------------------------------------*/
+.rs-skill-item label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #0A0E1A;
+    margin-bottom: 10px;
+}
+.progress, .progress-stacked {
+    height: 12px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+.progress-outer {
+    border: 1px solid #57595C;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+.progress-num {
+    position: absolute;
+    left: 73%;
+    top: -50px;
+    background: #0057FC;
+    color: #fff;
+    padding: 15px 9px;
+    font-size: 11px;
+    line-height: 1px;
+    border-radius: 4px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 16px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 10px 10px 0;
+        border-color: transparent #0057FC transparent transparent;
+        transform: rotate(0deg);
+    }
+}

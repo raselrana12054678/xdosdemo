@@ -1,0 +1,89 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 6.2 Award
+/*----------------------------------------*/
+.award-area {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.shape-arrow {
+    & img {
+        @media #{$lg} {
+            margin-top: 45px;
+        }
+    }
+}
+.rsaward-wrapper {
+    @media #{$md} {
+        margin-top: 30px;
+    }
+    .row {
+        & .col-md-6:nth-child(even) {
+            & .rsaward {
+                border-bottom: 1px solid #57595C;
+                padding-left: 100px;
+                border-left: 1px solid #000;
+                @media #{$xl} {
+                    padding-left: 60px;
+                }
+                @media #{$lg} {
+                    padding-left: 45px;
+                }
+                @media #{$xs} {
+                    border-bottom: 1px solid #57595C;
+                    border-left: none;
+                    padding-left: 0;
+                }
+            }
+        }
+        & .col-md-6:nth-child(1) {
+            & .rsaward {
+                padding-top: 0;
+            }
+        }
+        & .col-md-6:nth-child(2) {
+            & .rsaward {
+                padding-top: 0;
+            }
+        }
+        & .col-md-6:nth-last-child(-n+2) {
+            & .rsaward {
+                padding-bottom: 0;
+                border-bottom: 0;
+                @media #{$xs} {
+                    border-bottom: 1px solid #57595C;
+                }
+            }
+        }
+    }
+}
+
+.rsaward {
+    border-bottom: 1px solid #000;
+    padding: 38px 0;
+    @media #{$xs} {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+    &--wrapper {
+        padding-right: 80px;
+    }
+    & span {
+        font-size: 20px;
+        font-family: var(--rs-fonts-heading);
+        color: #57595C;
+        display: block;
+        margin-bottom: 10px;
+        @media #{$xs} {
+            font-size: 18px;
+        }
+    }
+    &__title {
+        font-size: 30px;
+        margin: 0;
+        @media #{$xs} {
+            font-size: 23px;
+        }
+    }
+}

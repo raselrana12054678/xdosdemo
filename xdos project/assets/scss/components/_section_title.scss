@@ -1,0 +1,368 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* 2.9 Section Title
+/*----------------------------------------*/
+.rs-section-title-wrapper {
+    &-h-2-wpr {
+        & .text-h-2 { 
+            @media #{$md} {
+                font-size: 13px;
+                line-height: 21px;
+            }
+            @media #{$sm,$xs} { 
+                font-size: 12px;
+                line-height: 21px;
+            }
+        }
+    }
+    & p {
+        & br {
+            @media #{$xs,$md} {
+                display: none;
+            }
+        }
+    }
+    &-h-2 {
+        padding-left: 240px;
+        @media #{$xxlm} {
+            padding-left: 315px;
+        }
+        @media #{$xl} {
+            padding-left: 260px;
+        }
+        @media #{$lg,$md} {
+            padding-left: 0;
+            font-size: 48px;
+        }
+        @media #{$sm,$xs} {
+            padding-left: 0;
+            font-size: 48px;
+        }
+    }
+    &-hm-2 {
+        margin-bottom: 65px;
+        @media #{$xs} {
+            margin-bottom: 40px;
+        }
+    }
+    &-h-3 {
+        margin-bottom: 45px;
+        @media #{$xs} {
+            margin-bottom: 25px;
+        }
+        & p {
+            @media #{$md} {
+                font-size: 11px;
+                line-height: 25px;
+            }
+        }
+    }
+    &-h-4 {
+        margin-bottom: 44px;
+        @media #{$xl} {
+            margin-bottom: 14px;
+        }
+        @media #{$md,$xs} {
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+    }
+    &-c-hm-4 {
+        margin-bottom: 45px;
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+        @media #{$xs} {
+            margin-bottom: 0;
+        }
+    }
+    &-h-5 {
+        margin-bottom: 45px;
+        @media #{$xl} {
+            margin-bottom: 10px;
+        }
+        @media #{$lg,$sm} {
+            margin-bottom: 20px;
+        }
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+    }
+    &-hm-5 {
+        margin-bottom: 45px;
+        @media #{$lg,$md} {
+            margin-bottom: 0;
+        }
+        
+    }
+    &-sub-dtls {
+        margin-bottom: 33px;
+        @media #{$xs} {
+            margin-bottom: 0;
+        }
+    }
+    &-tile-sub-inr {
+        margin-bottom: 33px;
+        @media #{$xs} {
+            margin-bottom: 10px;
+        }
+    }
+}
+.rs-section {
+    &-subtitle {
+        font-size: 15px;
+        @media #{$xs} {
+            font-size: 13px;
+        }
+        font-weight: 500;
+        color: #57595C;
+        text-transform: uppercase;
+        display: block;
+        &-white {
+            color: #fff;
+        }
+        & i {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--rs-theme-color);
+            display: inline-block;
+            margin-right: 6px;
+            &.sub-dot-color {
+                background: #FF5B15;
+            }
+        }
+    }
+    &-title {
+        font-size: 60px;
+        font-weight: 500;
+        &-inr {
+            @media #{$xl} {
+                font-size: 50px;
+                line-height: 53px;
+                margin-bottom: 10px;
+            }
+        }
+        .rs-fs-40 {
+            font-size: 40px;
+        }
+        &-rhm-2 {
+            @media #{$xl} {
+                font-size: 51px;
+            }
+        }
+        @media #{$lg} {
+            font-size: 54px;
+        }
+        @media #{$lg,$md} {
+            font-size: 40px;
+        }
+        @media #{$xs} {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$md} {
+                display: none;
+            }
+        }
+        &-white {
+            color: #fff;
+            @media #{$md} {
+                font-size: 30px;
+            }
+            @media #{$xs} {
+                font-size: 25px;
+            }
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+        &-content-white {
+            color: #A3AEC3;
+            & b {
+                color: #fff;
+            }
+        }
+
+        &-5 {
+            font-size: 40px;
+            line-height: 50px;
+            @media #{$lg} {
+                font-size: 23px;
+            }
+            @media #{$md} {
+                font-size: 22px;
+            }
+            @media #{$sm} {
+                font-size: 20px;
+                line-height: 35px;
+            }
+            @media #{$xs} {
+                font-size: 13px;
+                line-height: 25px;
+            }
+        }
+        &-h-2 {
+            @media #{$xxlm} {
+                font-size: 44px;
+            }
+            @media #{$xl} {
+                font-size: 40px;
+            }
+            @media #{$xs} {
+                font-size: 24px;
+                line-height: 35px;
+            }
+        }
+        &-h-tl {
+            @media #{$xl} {
+                font-size: 50px;
+            }
+            @media #{$md} {
+                font-size: 30px;
+            }
+        }
+        &-h-3 {
+            font-weight: 500;
+            @media #{$xl} {
+                font-size: 57px;
+            }
+            @media #{$lg} {
+                font-size: 36px;
+            }
+            @media #{$md} {
+                font-size: 27px;
+            }
+            @media #{$sm} {
+                font-size: 28px;
+                line-height: 41px;
+            }
+            @media #{$xs} {
+                font-size: 25px;
+                line-height: 36px;
+            }
+        }
+        &-h-4 {
+            @media #{$xl} {
+                font-size: 45px;
+            }
+            @media #{$md,$sm} {
+                font-size: 30px;
+            }
+        }
+        &-hm-4 {
+            @media #{$xl} {
+                font-size: 45px;
+            }
+        }
+        &-hm-4-h {
+            @media #{$xl} {
+                font-size: 50px;
+                font-weight: 500;
+            }
+            @media #{$xs} {
+                font-size: 25px;
+            }
+        }
+        &-fq-h-4 {
+            @media #{$xl} {
+                font-size: 58px;
+            }
+            @media #{$xs} {
+                font-size: 26px;
+            }
+        }
+        &-n-h-4 {
+            @media #{$xl} {
+                font-size: 37px;
+            }
+        }
+        &-c-h-4 {
+            @media #{$md} {
+                font-size: 30px;
+            }
+        }
+        &-h-5 {
+            @media #{$xl} {
+                font-size: 47px;
+            }
+            @media #{$md} {
+                font-size: 21px;
+            }
+            @media #{$sm} {
+                font-size: 23px;
+                margin-bottom: 50px;
+            }
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+        &-sub-t {
+            font-size: 40px;
+            @media #{$xs} {
+                font-size: 25px;
+            }
+        }
+        &-pce-tile {
+            @media #{$xs} {
+                margin-bottom: 15px;
+            }
+        }
+        &-sub-tiles {
+            @media #{$xl} {
+                font-size: 36px;
+            }
+        }
+        &-tm-sub {
+            @media #{$xl} {
+                font-size: 38px;
+            }
+        }
+        &-cnt-sub {
+            font-size: 100px;
+            @media #{$xl} {
+                font-size: 80px;
+            }
+            @media #{$lg} {
+                font-size: 64px;
+            }
+            @media #{$sm} {
+                font-size: 80px;
+            }
+            @media #{$xs} {
+                font-size: 50px;
+            }
+        }
+        &-sub-tile {
+            @media #{$sm,$xs} {
+                margin-bottom: 20px;
+            }
+        }
+        &-hm-3 {
+            font-size: 51px;
+        }
+    }
+}
+.rs-section-title1 {
+    font-size: 60px;
+    font-family: var(--rs-fonts-heading);
+    font-weight: 400;
+    @media #{$lg} {
+        font-size: 41px;
+    }
+    @media #{$md} {
+        font-size: 30px;
+    }
+    @media #{$xs} {
+        font-size: 20px;
+    }
+    &-white {
+        color: #fff;
+    }
+}

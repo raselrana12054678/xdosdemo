@@ -1,0 +1,141 @@
+@use '../utils/' as *;
+
+/*----------------------------------------*/
+/* 2.6 Offcanvas
+/*----------------------------------------*/
+.rs-offcanvas {
+    position: fixed;
+    z-index: 99;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    right: 0;
+    top: 0;
+    padding: 50px 25px;
+    opacity: 0;
+    visibility: hidden;
+    @include transform(translateX(100%));
+    @include transition(.3s);
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+    @media #{$xxl} {
+        padding: 50px 25px;
+    }
+    @media #{$xs} {
+        width: 100%;
+        margin-right: 0;
+    }
+    @media #{$sm} {
+        width: 301px;
+    }
+    &-open {
+        opacity: 1;
+        visibility: visible;
+        @include transform(translateX(0));
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media #{$sm} {
+            margin-bottom: 40px;
+        }
+    }
+    &-close-toggle {
+        font-size: 29px;
+        color: var(--rs-heading-color);
+        @include transition(.3s);
+        &:hover {
+            @include transform(rotate(-180deg));
+        }
+    }
+    &-headers {
+        margin-bottom: 90px;
+        @media #{$xxl,$xxlm,$xl,$lg,$md,$xs,$sm} {
+            margin-bottom: 60px;
+        }
+    }
+    &-title {
+        font-size: 40px;
+    }
+    &-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin: 65px 0;
+        @media #{$xxl,$xxlm,$xl,$lg,$md,$sm,$xs} {
+            margin: 50px 0;
+        }
+    }
+    &-info {
+        span {
+            color: #222;
+            display: block;
+            position: relative;
+            line-height: 40px;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 1px;
+                right: 0;
+                bottom: 0;
+                background-color: #414144;
+                @include transition(.3s);
+                display: block;
+            }
+            &:hover::after {
+                width: 50%;
+                display: block;
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+    &-sm-title {
+        font-size: 25px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+    }
+    &-social {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        @media #{$xl,$lg,$md,$xs,$sm} {
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+        & a {
+            display: inline-block;
+            text-align: center;
+            margin-right: 20px;
+            height: 40px;
+            width: 40px;
+            line-height: 38px;
+            border: 1px solid rgba(2, 11, 24, 0.1);
+            border-radius: 40px;;
+            @include transition(.3s);
+            &:hover {
+                 background-color: #1e1e1e;
+                 color: #fff;
+            }
+
+        }
+    }
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        transition: 0.45s ease-in-out;
+        background: rgba(24, 24, 24, 0.4);
+        opacity: 0;
+        visibility: hidden; 
+    }
+    &-open {
+        opacity: 1;
+        visibility: visible;
+    }
+}

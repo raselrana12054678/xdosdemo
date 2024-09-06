@@ -1,0 +1,124 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/* 6.11 Price
+/*----------------------------------------*/
+.rsprices {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    display: block;
+    z-index: 0;
+    @media #{$lg} {
+        padding: 40px 30px;
+    }
+    @media #{$md} {
+        padding: 30px 20px;
+    }
+    position: relative;
+    border-radius: 20px;
+    @include transition(.3s);
+    outline-offset: 0;
+    &-h-3 {
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+    }
+    &-hm-3 {
+        @media #{$sm,$xs} {
+            margin-bottom: 30px;
+        }
+    }
+    &:hover {
+        .rs-btn-sec-3 {
+            background-color: #0057FC;
+            color: #fff;
+            & i {
+                background-color: #71A2FF;
+            }
+        }
+    }
+    &__icon {
+        & span {
+            font-size: 80px;
+            margin-right: 40px;
+            z-index: 0;
+            position: relative;
+            @media #{$md} {
+                line-height: 107px;
+            }
+            @media #{$lg} {
+                line-height: 117px;
+            }
+            @media #{$xl,$xxlm} {
+                line-height: 100px;
+            }
+            @media #{$xxl} {
+                line-height: 100px;
+            }
+            
+        }
+        &-shape {
+            position: absolute;
+            left: 10%;
+            top: 48px;
+            z-index: -1;
+            @media #{$xs} {
+                top: 11px;
+            }
+            @media #{$md} {
+                top: 33px;
+            }
+        }
+    }
+    &__price {
+        & span {
+            margin-top: 30px;
+            font-size: 70px;
+            @media #{$xs} {
+                font-size: 45px;
+            }
+            @media #{$md} {
+                font-size: 50px;
+            }
+            line-height: 70px;
+            font-family: var(--rs-fonts-heading);
+        }
+    }
+    &__title {
+        border-bottom: 1px solid #57595C;
+        padding-bottom: 20px;
+        @media #{$md} {
+            font-size: 22px;
+        }
+        &-sub-title {
+            @media #{$xs} {
+                margin-top: 10px;
+            }
+        }
+    }
+    &__list {
+        & ul {
+            & li {
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 28px;
+                margin-bottom: 25px;
+                @media #{$md} {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                    line-height: 24px;
+                }
+                & i {
+                    margin-right: 10px;
+                    font-size: 18px;
+                    @media #{$md} {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

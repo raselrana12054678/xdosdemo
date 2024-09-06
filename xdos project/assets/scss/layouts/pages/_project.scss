@@ -1,0 +1,113 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 6.13 Project
+/*----------------------------------------*/
+.rsproject {
+    &__items {
+        background-color: #FFE9C9;
+        padding: 20px 20px 28px 20px;
+        border-radius: 20px;
+        &:hover {
+            & .rsproject__link {
+                & i {
+                    background-color: #FF5B15;
+                    color: #ffff;
+                    border-color: #FF5B15;
+                }
+            }
+        }
+    }
+    &__thumb {
+        & img {
+            max-width: 100%;
+        }
+    }
+    &__content {
+        @media #{$xl} {
+            margin-right: 0;
+        }
+        @include flexbox();
+    }
+    &__meta {
+        @include flexbox();
+        justify-content: space-between;
+        & span {
+            font-size: 15px;
+            font-weight: 400;
+            font-family: var(--rs-fonts-body);
+            color: #57595C;
+            text-transform: uppercase;
+        }
+    }
+    &__title {
+        font-weight: 400;
+        line-height: 40px;
+        color: #0A0E1A;
+        text-transform: capitalize;
+        font-size: 30px;
+        @media #{$xl} {
+            font-size: 21px;
+        }
+        @media #{$lg} {
+            font-size: 19px;
+        }
+        @media #{$md,$sm,$xs} {
+            font-size: 25px;
+        }
+        :hover {
+            color: var(--rs-theme-color);
+        }
+    }
+    &__link {
+        & a {
+            & i {
+                text-align: center;
+                height: 60px;
+                width: 60px;
+                line-height: 56px;
+                border: 1px solid #57595C;
+                border-radius: 100%;
+                @include transform(rotate(-45deg));
+                @media #{$xl,$xs} {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    &__text {
+        @media #{$xl} {
+            margin-left: 0;
+        }
+    }
+}
+
+.rs-arrow-swiper {
+    & i {
+        font-size: 52px;
+        color: #57595C;
+        &:hover {
+            color: var(--rs-theme-color);
+        }
+    }
+    & cite {
+        width: 12px;
+        height: 12px;
+        background-color: #DBDBDB;
+        border-radius: 100%;
+        @include transform(translateY(20px));
+        margin: 0 15px;
+    }
+}
+
+.rs-swiper-active-margin {
+    margin: 0 -100px;
+    @media #{$xl,$md,$sm,$xs} {
+        margin: 0 15px;
+    }
+    @media #{$lg,$md} {
+        margin: 0 30px;
+    }
+}

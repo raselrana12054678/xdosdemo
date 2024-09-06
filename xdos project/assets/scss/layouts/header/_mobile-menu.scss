@@ -1,0 +1,55 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/* 3.2 Mobile Menu	 
+/*----------------------------------------*/
+.rs-offcanvas-menu {
+    margin-bottom: 30px;
+    & ul {
+        & li {
+            position: relative;
+            border-bottom: 1px solid rgb(1 15 28 / 10%);
+            & > a {
+                font-size: 16px;
+                display: block;
+                font-weight: 500;
+                padding: 10px 0;
+                &:hover {
+                    @media #{$md,$sm,$xs} {
+                        color: var(--rs-theme-color);
+                    }
+                }
+            }
+            &.active {
+                & > a {
+                    color: var(--rs-theme-color);
+                }
+                & > .rs-menu-close {
+                        border-color: var(--rs-theme-color);
+                        color: #fff;
+                        background-color: var(--rs-theme-color);
+                        & i {
+                            @include transform(rotate(90deg));
+                        }
+                }
+            }
+            & .sub-menu {
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+.rs-menu-close {
+    position: absolute;
+    right: 0;
+    top: 7.5px;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 29px;
+    & i {
+        @include transition(.3s);
+    }
+}

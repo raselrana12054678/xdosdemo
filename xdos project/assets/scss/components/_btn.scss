@@ -1,0 +1,254 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* 2.4 Button
+/*----------------------------------------*/
+.rs-btn {
+    background-color: var(--rs-theme-color);
+    padding: 17px 45px;
+    font-size: 18px;
+    font-family: var(--rs-fonts-heading);
+    border-radius: 5px;
+    display: inline-block;
+    color: #fff;
+    text-transform: capitalize;
+    @media #{$xs} {
+        font-size: 15px;
+    }
+}
+.rs-btn {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        & .rs-btn-y-1 {
+            @include transform(translateY(-100%));
+        }
+        & .rs-btn-y-2 {
+            @include transform(translateY(0));
+        }
+        & i {
+            right: -100%;
+        }
+    }
+    & i {
+        width: 22px;
+        height: 100%;
+        background-color: #71A2FF;
+        position: absolute;
+        bottom: -2px;
+        right: -12px;
+        @include transform(rotate(13deg));
+        @include transition(.3s);
+    }
+    &-sec {
+        background-color: var(--rs-theme-sec-color);
+        padding: 17px 45px;
+        font-size: 18px;
+        font-family: var(--tp-fonts-heading);
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 6px;
+        @media #{$xl} {
+            padding: 12px 17px;
+        }
+        &:hover {
+            & .rs-btn-y-1 {
+                @include transform(translateY(-100%));
+            }
+            & .rs-btn-y-2 {
+                @include transform(translateY(0));
+            }
+            & i {
+                right: -100%;
+            }
+        }
+        @media #{$lg,$md} {
+            z-index: 2;
+            position: relative;
+        }
+        @media #{$xs} {
+            font-size: 15px;
+            z-index: 2;
+            position: relative;
+        }
+        &-lg {
+            padding: 21px 45px;
+        }
+        & i {
+            width: 22px;
+            height: 100%;
+            background-color: #E5CF00;
+            position: absolute;
+            bottom: -4px;
+            right: -12px;
+            @include transform(rotate(18deg));
+            @include transition(.3s);
+        }
+        &-h-3 {
+            @media #{$md} {
+                padding: 17px 28px;
+            }
+        }
+    }
+    &-wrap {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        & span {
+            @include transition(.3s);
+            display: block;
+        }
+    }
+    &-y-1 {
+
+    }
+    &-y-2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        @include transform(translateY(100%));
+    }
+    &-circle {
+        font-family: var(--rs-fonts-heading);
+        font-size: 60px;
+        color: rgba(255,255,255, 0.2);
+        border: 2px solid rgba(255,255,255, 0.2);
+        padding: 35px 60px;
+        display: inline-block;
+        line-height: 1;
+        border-radius: 100%;
+        @include transition(.3s);
+        &:hover {
+            background-color: var(--rs-theme-color);
+            color: #fff;
+            border-color: var(--rs-theme-color);
+        }
+        @media #{$md} {
+            font-size: 30px;
+            padding: 28px 45px;
+        }
+        @media #{$xs} {
+            font-size: 30px;
+        }
+    }
+    &-header {
+        & a {
+            & i {
+               margin-left: 8px;
+               @include transform(rotate(-45deg));
+               font-size: 12px;
+            }
+        }
+    }
+    &-border {
+        border: 1px solid #57595C;
+        padding: 16px 40px;
+        border-radius: 5px;
+        @include transition(.3s);
+        font-size: 18px;
+        font-weight: 400;
+        font-family: var(--rs-fonts-heading);
+        line-height: 28px;
+        &:hover {
+            background: var(--rs-theme-color);
+            border-color: var(--rs-theme-color);
+            color: #fff;
+        }
+    }
+    &-hero-1-4 {
+        & a {
+            color: #fff;
+            text-transform: capitalize;
+            & i {
+                margin-left: 8px;
+                @include transform(rotate(-45deg));
+                @include transition(.3s);
+            }
+        }
+    }
+    &-hero-1-5 {
+        & a {
+            @media #{$md} {
+                font-size: 11px;
+            }
+        }
+    }
+    &-about-1-4 {
+        & a {
+            color: #fff;
+            text-transform: capitalize;
+            & i {
+                margin-left: 8px;
+                @include transform(rotate(-45deg));
+                @include transition(.3s);
+            }
+        }
+    }
+    &-hero-4 {
+        padding: 20px 40px;
+        @media #{$xs} {
+            padding: 20px 20px;
+        }
+        background-color: var(--rs-theme-color);
+        color: #fff;
+        border-radius: 5px;
+        @include transition(.3s);
+        &:hover {
+            background-color: #E5CF00;
+            color: #0A0E1A;
+            & i {
+                margin-left: 0;
+            }
+        }
+    }
+    &-about-4 {
+        padding: 20px 40px;
+        background-color: var(--rs-theme-color);
+        color: #fff;
+        border-radius: 5px;
+        @include transition(.3s);
+        &:hover {
+            background-color: #E5CF00;
+            color: #0A0E1A;
+            & i {
+                margin-left: 0;
+            }
+        }
+    }
+}
+// blog-rs-text-btn 
+.rs-text-btn {
+    font-family: var(--rs-fonts-heading);
+    font-size: 18px;
+    &:hover {
+        color: var(--rs-theme-color);
+    }
+    @media #{$xs} {
+        font-size: 15px;
+    }
+    font-weight: 400;
+    color: #57595C;
+    @include flexbox();
+    flex-wrap: wrap;
+    align-items: center;
+    & i {
+        margin-left: 10px;
+        @include transform(rotate(-45deg));
+    }
+    &-white {
+        color: #A3AEC3;
+    }
+}
+
+.rs-btn-sec-3 {
+    background-color: #FF5B15;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: var(--rs-fonts-heading);
+    & i {
+        background-color: #FFAD8A;
+    }
+}

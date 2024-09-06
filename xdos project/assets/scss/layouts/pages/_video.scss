@@ -1,0 +1,16 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* 6.17 Video
+/*----------------------------------------*/
+.rs-video-area {
+    background-position: center;
+    background-size: cover;
+    padding: 300px 30px;
+    @media #{$lg} {
+        padding: 200px 30px;
+    }
+    @media #{$md,$xs} {
+        padding: 150px 30px;
+    }
+}
